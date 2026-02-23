@@ -9,7 +9,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+//@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://smartprep-ai.up.railway.app"
+})
 public class AiController {
 
     private final OpenRouterService service;
